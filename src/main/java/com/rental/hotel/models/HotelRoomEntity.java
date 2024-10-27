@@ -13,7 +13,7 @@ public class HotelRoomEntity {
     @Id
     private Long roomId;
 
-    private int roomRentPerDay;
+    private String roomType;
 
     private boolean roomAvailability;
 
