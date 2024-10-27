@@ -17,4 +17,7 @@ public class HotelRoomEntity {
 
     private boolean roomAvailability;
 
+    @OneToOne(mappedBy = "roomId")
+    private RentalInformationEntity rentalInformationEntity;
+
 }
