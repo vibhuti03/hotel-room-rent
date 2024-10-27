@@ -1,8 +1,6 @@
 package com.rental.hotel.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,8 +13,11 @@ public class HotelRoomEntity {
     @Id
     private Long roomId;
 
-    private int roomRentPerDay;
+    private String roomType;
 
     private boolean roomAvailability;
+
+    @OneToOne(mappedBy = "roomId")
+    private RentalInformationEntity rentalInformationEntity;
 
 }
